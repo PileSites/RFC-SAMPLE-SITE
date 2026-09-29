@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFC GULU — Regal Food Center | Best Crispy Fried Chicken, Local Ugandan & Global Kitchen</title>
+  <meta name="description" content="Regal Food Center (RFC Gulu). Famous signature crispy fried chicken & fries, authentic Ugandan matooke, Indian curries, pizza, burgers, outdoor garden lawn & party catering. Open daily 8:00 AM to Midnight.">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Progress Line -->
+  <div id="scroll-progress-line" class="scroll-progress-line"></div>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- TOP CONTOUR BAR -->
+  <div class="top-contour-bar">
+    <div class="top-contour-inner">
+      <div>
+        <span class="status-dot-pulse"></span>
+        <span>Open Daily 8:00 AM – Midnight • Best Fast-Food Chicken, Fries & Ugandan Kitchen</span>
+        <span style="opacity: 0.3; margin: 0 0.5rem;">|</span>
+        <span>Plot 18, Gulu Avenue, Main Street, Laroo, Gulu</span>
+      </div>
+      <div>
+        <span>Near Gulu Regional Referral Hospital & Historic Acholi Inn</span>
+        <span style="opacity: 0.3; margin: 0 0.5rem;">|</span>
+        <a href="tel:0743599458" style="color: #FFFFFF; text-decoration: underline;">0743 599458</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDITORIAL HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-wrap" aria-label="RFC Regal Food Center Gulu Home">
+        <img src="assets/rfc_logo.jpg" alt="RFC Logo" class="brand-logo-img">
+        <div class="brand-title">RFC <span>GULU</span></div>
+        <span class="brand-elevation-tag">REGAL FOOD CENTER • GULU CITY</span>
+      </a>
+
+      <!-- Clean Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#menu-showcase" class="nav-link">Visual Menu</a></li>
+          <li><a href="#gallery-strip" class="nav-link">Lookbook</a></li>
+          <li>
+            <a href="#patio-section" class="nav-link">
+              Garden & Parties <span class="nav-badge-tag">FAIRY LIGHTS</span>
+            </a>
+          </li>
+          <li><a href="#visit-section" class="nav-link">Location & Hours</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Items: Sound Atmosphere + Food Tray Order Button -->
+      <div style="display: flex; align-items: center; gap: 0.8rem;">
+        <!-- Sound Atmosphere Toggle -->
+        <button id="sound-btn" class="sound-toggle-btn" onclick="AmbientAudio.toggle()" title="Toggle Diner Acoustic Sound Atmosphere" aria-label="Toggle Sound">
+          <div class="eq-bars">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+        </button>
+
+        <!-- Order Tray Button -->
+        <button class="btn-contour-primary" onclick="AppUtils.openTrayModal()">
+          <span>Food Tray (<span class="tray-count-bubble">0</span>)</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO: PICTORIAL LOOKBOOK & HIGH-IMPACT MOSAIC -->
+  <section id="hero-stage" class="hero-contour-stage">
+    
+    <!-- Procedural Golden Elevation Waves Canvas -->
+    <canvas id="contour-canvas"></canvas>
+
+    <div class="hero-mosaic-grid">
+      
+      <!-- Left Large Visual Feature: User's Signature Chicken Platter -->
+      <div class="hero-main-visual">
+        <img src="assets/rfc_crispy_fried_chicken_platter.png" alt="RFC Gulu Signature Crispy Fried Chicken & French Fries Platter" loading="eager">
+        
+        <!-- Topographic Contour SVG Overlay -->
+        <svg class="hero-contour-overlay-svg" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 100 Q 200 40 400 120 T 800 80" stroke="rgba(255,184,0,0.5)" stroke-width="1.8" fill="none"/>
+          <path d="M0 200 Q 250 140 500 240 T 800 180" stroke="rgba(211,35,35,0.4)" stroke-width="1.2" fill="none"/>
+          <path d="M0 320 Q 220 260 440 360 T 800 300" stroke="rgba(255,184,0,0.5)" stroke-width="1.8" fill="none"/>
+          <path d="M0 450 Q 260 380 520 480 T 800 420" stroke="rgba(211,35,35,0.4)" stroke-width="1.2" fill="none"/>
+        </svg>
+
+        <!-- Continuous Rotating Seal -->
+        <div class="rotating-terroir-stamp" title="RFC Regal Food Center Gulu">
+          <div class="stamp-inner-text">
+            RFC GULU • REGAL FOOD CENTER • BEST CHICKEN •
+          </div>
+        </div>
+
+        <div class="hero-visual-caption">
+          <div class="hero-elevation-chip">
+            <span class="chip-line"></span>
+            <span>Plot 18 Gulu Avenue • Laroo Central Social Hub</span>
+          </div>
+
+          <h1 class="hero-display-title">
+            Crispy Chicken <span>& Fries</span> <br>
+            Social Hub
+          </h1>
+
+          <div class="hero-micro-summary">
+            Signature Fried Chicken • Steamed Matooke & Stews • Indian Butter Chicken • Fairy-Lit Garden Lawn
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button onclick="AppUtils.openTrayModal()" class="btn-contour-primary">
+              <span>Order Food Tray</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#gallery-strip" class="btn-contour-secondary" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border-color: rgba(255,255,255,0.35);">
+              <span>Explore Lookbook</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 2x2 Interactive Photo Matrix -->
+      <div class="hero-tile-matrix">
+        
+        <!-- Tile 1: Traditional Ugandan Matooke & Beef Stew -->
+        <a href="#menu-showcase" class="matrix-tile-card" onclick="AppUtils.filterMenu('local')">
+          <img src="assets/rfc_local_ugandan_food.jpg" alt="Traditional Steamed Matooke and Beef Stew" loading="lazy">
+          <div class="matrix-tile-contour"></div>
+          <div class="matrix-tag-box">
+            <span class="matrix-num">01 / LOCAL UGANDAN</span>
+            <div class="matrix-label">Steamed Matooke & Stew</div>
+          </div>
+        </a>
+
+        <!-- Tile 2: Authentic Spiced Chicken Pakora -->
+        <a href="#menu-showcase" class="matrix-tile-card" onclick="AppUtils.filterMenu('asian')">
+          <img src="assets/rfc_indian_chicken_pakora.jpg" alt="Authentic Indian Spiced Chicken Pakoras" loading="lazy">
+          <div class="matrix-tile-contour"></div>
+          <div class="matrix-tag-box">
+            <span class="matrix-num">02 / INDIAN SPICE</span>
+            <div class="matrix-label">Spiced Chicken Pakoras</div>
+          </div>
+        </a>
+
+        <!-- Tile 3: Rich Butter Chicken & Basmati Rice -->
+        <a href="#menu-showcase" class="matrix-tile-card" onclick="AppUtils.filterMenu('asian')">
+          <img src="assets/rfc_butter_chicken_curry.jpg" alt="Butter Chicken Handi and Steaming Basmati Rice" loading="lazy">
+          <div class="matrix-tile-contour"></div>
+          <div class="matrix-tag-box">
+            <span class="matrix-num">03 / CURRY HANDI</span>
+            <div class="matrix-label">Butter Chicken & Rice</div>
+          </div>
+        </a>
+
+        <!-- Tile 4: Outdoor Garden Lawn with Fairy Lights -->
+        <a href="#patio-section" class="matrix-tile-card">
+          <img src="assets/rfc_outdoor_garden_evening.png" alt="Outdoor Garden Lawn with Fairy Light Tree" loading="lazy">
+          <div class="matrix-tile-contour"></div>
+          <div class="matrix-tag-box">
+            <span class="matrix-num">04 / GARDEN PATIO</span>
+            <div class="matrix-label">Fairy-Lit Evening Lawn</div>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WELCOME STRIP -->
+  <div class="focaccia-banner">
+    <div class="focaccia-inner">
+      <div class="focaccia-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <span>Signature RFC Standard</span>
+      </div>
+      <div class="focaccia-text">
+        "Every signature crispy chicken and fries pack is served with crisp takeaway salad and chef's house dipping sauces."
+      </div>
+      <div>
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--color-terracotta);">OPEN 8:00 AM TO MIDNIGHT DAILY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTOUR SECTION DIVIDER 1: Hero to Gallery Strip -->
+  <div class="contour-divider-wrap" style="background: var(--bg-sand);">
+    <svg class="contour-divider-svg" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 45 C 320 85 640 10 960 55 C 1200 85 1360 30 1440 40 L 1440 80 L 0 80 Z" fill="#141311"/>
+      <path d="M0 30 C 360 70 720 -5 1080 45 C 1260 70 1380 20 1440 30" stroke="#D32323" stroke-width="2" stroke-dasharray="8 6" fill="none"/>
+      <path d="M0 45 C 320 85 640 10 960 55 C 1200 85 1360 30 1440 40" stroke="#FFB800" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- 6-TILE CONTOUR EXPLORATION STRIP (100% PICTORIAL LOOKBOOK) -->
+  <section id="gallery-strip" class="contour-gallery-strip">
+    <div class="strip-grid-6">
+      
+      <!-- Tile 1: Crispy Platter -->
+      <a href="#menu-showcase" class="strip-tile" onclick="AppUtils.filterMenu('chicken')">
+        <img src="assets/rfc_crispy_fried_chicken_platter.png" alt="Signature Crispy Fried Chicken Platter" loading="lazy">
+        <div class="strip-tile-overlay"></div>
+        <div class="strip-tile-info">
+          <span class="strip-num">01 / CRISPY</span>
+          <div class="strip-title">Golden Chicken Platter</div>
+        </div>
+      </a>
+
+      <!-- Tile 2: Matooke Stew -->
+      <a href="#menu-showcase" class="strip-tile" onclick="AppUtils.filterMenu('local')">
+        <img src="assets/rfc_local_ugandan_food.jpg" alt="Steamed Matooke and Beef Stew" loading="lazy">
+        <div class="strip-tile-overlay"></div>
+        <div class="strip-tile-info">
+          <span class="strip-num">02 / UGANDAN</span>
+          <div class="strip-title">Steamed Matooke Stew</div>
+        </div>
+      </a>
+
+      <!-- Tile 3: Indian Pakora -->
+      <a href="#menu-showcase" class="strip-tile" onclick="AppUtils.filterMenu('asian')">
+        <img src="assets/rfc_indian_chicken_pakora.jpg" alt="Spiced Indian Chicken Pakoras" loading="lazy">
+        <div class="strip-tile-overlay"></div>
+        <div class="strip-tile-info">
+          <span class="strip-num">03 / PAKORA</span>
+          <div class="strip-title">Rajasthani Chicken 65</div>
+        </div>
+      </a>
+
+      <!-- Tile 4: Butter Chicken -->
+      <a href="#menu-showcase" class="strip-tile" onclick="AppUtils.filterMenu('asian')">
+        <img src="assets/rfc_butter_chicken_curry.jpg" alt="Butter Chicken and Basmati Rice" loading="lazy">
+        <div class="strip-tile-overlay"></div>
+        <div class="strip-tile-info">
+          <span class="strip-num">04 / CURRY</span>
+          <div class="strip-title">Butter Chicken Handi</div>
+        </div>
+      </a>
+
+      <!-- Tile 5: Outdoor Fairy Lights Lawn -->
+      <a href="#patio-section" class="strip-tile">
+        <img src="assets/rfc_outdoor_garden_evening.png" alt="Outdoor Evening Garden Lawn with Fairy Light Tree" loading="lazy">
+        <div class="strip-tile-overlay"></div>
+        <div class="strip-tile-info">
+          <span class="strip-num">05 / GARDEN</span>
+          <div class="strip-title">Fairy-Lit Event Lawn</div>
+        </div>
+      </a>
+
+      <!-- Tile 6: Party Pizza & Burgers -->
+      <a href="#menu-showcase" class="strip-tile" onclick="AppUtils.filterMenu('party')">
+        <img src="assets/rfc_party_burger_pizza.jpg" alt="Party Pizza and Smashburger Spread" loading="lazy">
+        <div class="strip-tile-overlay"></div>
+        <div class="strip-tile-info">
+          <span class="strip-num">06 / PARTY</span>
+          <div class="strip-title">Pizza & Burger Feast</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTOUR SECTION DIVIDER 2: Gallery Strip to Patio -->
+  <div class="contour-divider-wrap" style="background: var(--bg-dark);">
+    <svg class="contour-divider-svg" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 L 1440 0 L 1440 45 C 1120 85 800 10 480 55 C 240 85 80 30 0 40 Z" fill="#FFFFFF"/>
+      <path d="M0 45 C 320 85 640 10 960 55 C 1200 85 1360 30 1440 40" stroke="#FFB800" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- VISUAL SPLIT SECTION: OUTDOOR GARDEN LAWN & CELEBRATION HUB -->
+  <section id="patio-section" class="patio-section-wrap">
+    <div class="patio-inner-container">
+      
+      <!-- Big Visual Left: User's Illuminated Tree -->
+      <div class="patio-big-visual">
+        <img src="assets/rfc_outdoor_garden_evening.png" alt="RFC Gulu Outdoor Garden Event Lawn with Fairy Lights">
+        <div class="patio-stamp-overlay">
+          <span>OUTDOOR GARDEN & EVENING EVENTS</span>
+        </div>
+      </div>
+
+      <!-- Editorial Column Right -->
+      <div class="patio-editorial-col">
+        <div class="patio-editorial-tag">COMMUNITY & SOCIAL CELEBRATIONS</div>
+        <h2 class="patio-editorial-title">
+          Garden Evenings <span>& Party Feasts</span>
+        </h2>
+        <p class="patio-editorial-lead">
+          Celebrate birthdays, anniversaries, and evening dinners under the warm glow of our fairy-lit garden tree, or relax in our indoor yellow booths with customizable pizza and burger platters.
+        </p>
+
+        <!-- Mini Visual Pair -->
+        <div class="mini-photo-pair">
+          <div class="mini-photo-card">
+            <img src="assets/rfc_party_burger_pizza.jpg" alt="Party Pizza and Double Smashburgers">
+            <div class="mini-photo-caption">Party Feasts</div>
+          </div>
+          <div class="mini-photo-card">
+            <img src="assets/rfc_restaurant_interior.jpg" alt="Warm Yellow Indoor Dining Booths">
+            <div class="mini-photo-caption">Warm Yellow Booths</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+          <button onclick="AppUtils.openPartyModal('Outdoor Garden Evening Lawn Setup')" class="btn-contour-primary">
+            <span>Book Garden / Party</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a href="tel:0743599458" class="btn-contour-secondary">
+            <span>Call 0743 599458</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTOUR SECTION DIVIDER 3: Patio to Visual Menu -->
+  <div class="contour-divider-wrap" style="background: #FFFFFF;">
+    <svg class="contour-divider-svg" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 L 1440 0 L 1440 45 C 1120 85 800 10 480 55 C 240 85 80 30 0 40 Z" fill="#FAF7F0"/>
+      <path d="M0 35 C 360 75 720 0 1080 50 C 1260 75 1380 25 1440 35" stroke="#D32323" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- VISUAL MENU SECTION (PHOTO-FIRST CARDS) -->
+  <section id="menu-showcase" class="visual-menu-section">
+    <div class="menu-wrapper">
+      
+      <div class="menu-header-bar">
+        <div>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-terracotta);">FRESH & FLAVORFUL</span>
+          <h2 class="menu-section-title">The RFC <span>Visual Menu</span></h2>
+        </div>
+
+        <div class="menu-filter-bar">
+          <button class="filter-btn active" onclick="AppUtils.filterMenu('all', this)">All Items</button>
+          <button class="filter-btn" onclick="AppUtils.filterMenu('chicken', this)">Fried Chicken</button>
+          <button class="filter-btn" onclick="AppUtils.filterMenu('local', this)">Ugandan Kitchen</button>
+          <button class="filter-btn" onclick="AppUtils.filterMenu('asian', this)">Indian Curries</button>
+          <button class="filter-btn" onclick="AppUtils.filterMenu('party', this)">Pizza & Burgers</button>
+          <button class="filter-btn" onclick="AppUtils.filterMenu('dessert', this)">Juices & Sweets</button>
+        </div>
+      </div>
+
+      <!-- Menu Visual Grid -->
+      <div id="menu-grid" class="menu-visual-grid">
+        
+        <!-- Item 1: Signature Crispy Chicken Platter (User Image) -->
+        <article class="menu-visual-card" data-category="chicken">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_crispy_fried_chicken_platter.png" alt="Signature Crispy Fried Chicken Platter" loading="lazy">
+            <span class="card-tag-top">Fan Favorite #1</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">Signature Fried Chicken Platter</h3>
+            <p class="item-desc">Crispy golden chicken drumsticks and thighs, mountain of seasoned fries, fresh salad, and tomato-chili dip.</p>
+            <div class="item-price-huge">
+              UGX 24,000
+              <small>HOT & CRISPY</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Golden Crunch</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'chk-platter-ugx', name:'Signature Fried Chicken Platter', price:24000, formattedPrice:'UGX 24,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 2: 2-Piece Express Chicken Pack -->
+        <article class="menu-visual-card" data-category="chicken">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_hero_chicken_fries.jpg" alt="2-Piece Express Chicken Pack with Salad and Sauces" loading="lazy">
+            <span class="card-tag-top">Express Pack</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">2-Piece Chicken & Fries Pack</h3>
+            <p class="item-desc">Two crispy chicken cuts served in thermal takeaway packaging with fries, coleslaw, and dipping sauce.</p>
+            <div class="item-price-huge">
+              UGX 18,000
+              <small>TAKEAWAY FAVORITE</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Individual Pack</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'chk-2pc-express', name:'2-Piece Chicken & Fries Pack', price:18000, formattedPrice:'UGX 18,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 3: Authentic Indian Spiced Chicken Pakora -->
+        <article class="menu-visual-card" data-category="asian">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_indian_chicken_pakora.jpg" alt="Authentic Indian Spiced Chicken Pakoras" loading="lazy">
+            <span class="card-tag-top">Indian Kitchen</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">Indian Spiced Chicken Pakora</h3>
+            <p class="item-desc">Tender bite-sized chicken seasoned in traditional Rajasthani spices, red onions, curry leaves, and spicy dip.</p>
+            <div class="item-price-huge">
+              UGX 20,000
+              <small>AUTHENTIC RECIPE</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Rajasthani Spices</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'pakora-20k', name:'Indian Spiced Chicken Pakora', price:20000, formattedPrice:'UGX 20,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 4: Rich Butter Chicken & Basmati Rice -->
+        <article class="menu-visual-card" data-category="asian">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_butter_chicken_curry.jpg" alt="Rich Butter Chicken Curry in Copper Handi Bowl with Steaming Basmati Rice" loading="lazy">
+            <span class="card-tag-top">Curry Handi</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">Butter Chicken & Basmati Rice</h3>
+            <p class="item-desc">Tender tandoori chicken simmered in creamy butter tomato gravy in a copper handi, with fragrant basmati rice.</p>
+            <div class="item-price-huge">
+              UGX 25,000
+              <small>SERVED WITH RICE</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Slow-Simmered</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'butter-chk-25k', name:'Butter Chicken & Basmati Rice', price:25000, formattedPrice:'UGX 25,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 5: Steamed Matooke & Tender Beef Stew -->
+        <article class="menu-visual-card" data-category="local">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_local_ugandan_food.jpg" alt="Traditional Ugandan Matooke and Tender Beef Stew" loading="lazy">
+            <span class="card-tag-top">Ugandan Classic</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">Steamed Matooke & Beef Stew</h3>
+            <p class="item-desc">Freshly wrapped banana-leaf steamed matooke with slow-braised tender beef stew and simmered local greens.</p>
+            <div class="item-price-huge">
+              UGX 15,000
+              <small>TRADITIONAL PLATTER</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Northern Uganda Fresh</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'matooke-beef-15k', name:'Steamed Matooke & Beef Stew', price:15000, formattedPrice:'UGX 15,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 6: Gourmet Party Pizza (Large) -->
+        <article class="menu-visual-card" data-category="party">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_party_burger_pizza.jpg" alt="Large Loaded Cheesy Chicken and Pepperoni Pizza" loading="lazy">
+            <span class="card-tag-top">Party Favorite</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">RFC Signature Party Pizza</h3>
+            <p class="item-desc">Stone-baked crust with tomato herb pomodoro, mozzarella cheese pull, spiced chicken, beef pepperoni, and oregano.</p>
+            <div class="item-price-huge">
+              UGX 35,000
+              <small>LARGE 8-SLICE</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Great for Sharing</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'pizza-party-35k', name:'RFC Signature Party Pizza', price:35000, formattedPrice:'UGX 35,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 7: Double Smash Beef Burger & Fries -->
+        <article class="menu-visual-card" data-category="party">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_party_burger_pizza.jpg" alt="Double Smash Cheeseburger with Crisp Golden Fries" loading="lazy">
+            <span class="card-tag-top">Gourmet Burger</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">Double Smash Cheeseburger</h3>
+            <p class="item-desc">Two seared beef smash patties, melted cheddar, crisp lettuce, pickles, and secret relish on brioche with fries.</p>
+            <div class="item-price-huge">
+              UGX 18,000
+              <small>WITH FRIES</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Juicy & Rich</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'smash-burger-18k', name:'Double Smash Cheeseburger & Fries', price:18000, formattedPrice:'UGX 18,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 8: Fresh Passion & Mango Juices -->
+        <article class="menu-visual-card" data-category="dessert">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_juices_icecream.jpg" alt="Freshly Squeezed Tropical Mango and Passion Fruit Juice" loading="lazy">
+            <span class="card-tag-top">100% Pure</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">Fresh Passion & Mango Juice</h3>
+            <p class="item-desc">Naturally sweetened chilled juice squeezed from ripe Ugandan mangoes, passion fruits, and citrus oranges.</p>
+            <div class="item-price-huge">
+              UGX 7,000
+              <small>COLD GLASS</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Natural & Chilled</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'juice-7k', name:'Fresh Passion & Mango Juice', price:7000, formattedPrice:'UGX 7,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 9: Artisan Sundae Ice Cream & Milkshakes -->
+        <article class="menu-visual-card" data-category="dessert party">
+          <div class="card-photo-hero">
+            <img src="assets/rfc_juices_icecream.jpg" alt="Artisan Sundae Ice Cream Scoops with Whipped Cream" loading="lazy">
+            <span class="card-tag-top">Sweet Treat</span>
+          </div>
+          <div class="card-body-strip">
+            <h3 class="item-main-title">Sundae Ice Cream & Milkshake</h3>
+            <p class="item-desc">Thick creamy milkshakes or multi-scoop sundae bowls topped with fresh cream, waffle crunch, and berry drizzle.</p>
+            <div class="item-price-huge">
+              UGX 9,000
+              <small>SWEET FINISH</small>
+            </div>
+          </div>
+          <div class="card-action-strip">
+            <span class="item-micro-note">Student Favorite</span>
+            <button class="btn-add-quick" onclick="RFCTray.addItem({id:'icecream-9k', name:'Sundae Ice Cream & Milkshake', price:9000, formattedPrice:'UGX 9,000'})">
+              <span>+ Add to Tray</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTOUR SECTION DIVIDER 4: Menu to Visit -->
+  <div class="contour-divider-wrap" style="background: var(--bg-primary);">
+    <svg class="contour-divider-svg" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 45 C 320 85 640 10 960 55 C 1200 85 1360 30 1440 40 L 1440 80 L 0 80 Z" fill="#141311"/>
+      <path d="M0 45 C 320 85 640 10 960 55 C 1200 85 1360 30 1440 40" stroke="#FFB800" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- VISIT & LOCATION SECTION -->
+  <section id="visit-section" class="visit-section-wrap">
+    <div class="visit-inner-container">
+      
+      <!-- Info Left -->
+      <div class="visit-info-col">
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold);">FIND US IN GULU</span>
+        <h2 class="visit-title">Laroo Central <span>Plot 18 Gulu Ave</span></h2>
+        
+        <p style="color: #A1A1AA; line-height: 1.6; font-size: 0.95rem;">
+          Centrally located on Main Street / Gulu Avenue in Laroo, within easy reach of Gulu Regional Referral Hospital and the historic Acholi Inn.
+        </p>
+
+        <div class="visit-data-grid">
+          <div class="visit-data-box">
+            <h4>Address</h4>
+            <p>Plot NO 18, GULU AVENUE, MAIN STREET, Laroo, Gulu City, Uganda</p>
+            <button onclick="AppUtils.copyAddress()" style="color: var(--color-gold); font-size: 0.75rem; font-weight: 700; font-family: var(--font-mono); margin-top: 0.4rem; text-decoration: underline;">COPY ADDRESS</button>
+          </div>
+
+          <div class="visit-data-box">
+            <h4>Hours</h4>
+            <p>Open Daily (Mon – Sun):<br><strong>8:00 AM – 12:00 AM Midnight</strong></p>
+            <span style="color: #A3E635; font-size: 0.75rem; font-weight: 700; font-family: var(--font-mono);">OPEN TODAY</span>
+          </div>
+
+          <div class="visit-data-box">
+            <h4>Direct Hotline</h4>
+            <p><a href="tel:0743599458" style="color: #FFFFFF; font-weight: 700; font-size: 1.1rem;">0743 599458</a></p>
+            <a href="https://wa.me/256743599458?text=Hello%20RFC%20Gulu!%20I%20would%20like%20to%20order." target="_blank" rel="noopener" style="color: #25D366; font-size: 0.75rem; font-weight: 700; font-family: var(--font-mono); text-decoration: underline; margin-top: 0.3rem; display: inline-block;">ORDER ON WHATSAPP</a>
+          </div>
+
+          <div class="visit-data-box">
+            <h4>Services</h4>
+            <p>Dine-In • Express Takeaway • Fairy-Lit Garden Events • Local Delivery</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://maps.google.com/?q=Gulu+Avenue+Main+Street+Gulu+Uganda" target="_blank" rel="noopener" class="btn-contour-primary">
+            <span>Open in Google Maps</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button onclick="AppUtils.openPartyModal()" class="btn-contour-secondary" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3); background: transparent;">
+            <span>Reserve Table / Lawn</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Map Right -->
+      <div class="visit-map-box">
+        <iframe 
+          src="https://maps.google.com/maps?q=Gulu+Avenue+Main+Street+Gulu+Uganda&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          loading="lazy" 
+          title="Google Map Location of RFC Regal Food Center Gulu Avenue"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div style="display: flex; align-items: baseline; gap: 0.6rem;">
+        <span style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: #FFFFFF;">RFC</span>
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-gold); letter-spacing: 0.12em;">REGAL FOOD CENTER • GULU CITY</span>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 RFC GULU · PLOT 18 GULU AVENUE, MAIN STREET · HOTLINE: 0743 599458
+      </div>
+
+      <div>
+        <a href="#hero-stage" style="color: #FFFFFF; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-decoration: underline;">BACK TO TOP ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:0743599458" class="mobile-bar-btn call">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </a>
+
+    <a href="https://wa.me/256743599458?text=Hello%20RFC%20Gulu!%20I%20would%20like%20to%20order." target="_blank" rel="noopener" class="mobile-bar-btn whatsapp">
+      <span>WhatsApp</span>
+    </a>
+
+    <button onclick="AppUtils.openTrayModal()" class="mobile-bar-btn tray">
+      <span>Tray (<span class="tray-count-bubble">0</span>)</span>
+    </button>
+  </div>
+
+  <!-- FOOD TRAY MODAL DRAWER -->
+  <div id="tray-modal" class="modal-overlay" onclick="if(event.target === this) AppUtils.closeTrayModal()">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" onclick="AppUtils.closeTrayModal()" aria-label="Close Tray Modal">✕</button>
+
+      <div class="modal-header">
+        <h3>Your Food Tray</h3>
+        <p>Review items, customize delivery details, and send order directly to our counter!</p>
+      </div>
+
+      <div id="tray-items-container" class="tray-items-list"></div>
+
+      <div id="tray-empty-state" class="empty-tray-state">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🍗</div>
+        <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;">Your Tray is Empty</h4>
+        <p>Add crispy chicken, matooke, or curry from our menu.</p>
+      </div>
+
+      <div id="tray-summary-container" class="tray-summary-box" style="display: none;"></div>
+
+      <div id="tray-action-buttons" style="display: none;">
+        <div class="form-group">
+          <label class="form-label" for="tray-customer-name">Your Full Name</label>
+          <input type="text" id="tray-customer-name" class="form-input" placeholder="e.g. Okello Dennis">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div class="form-group">
+            <label class="form-label" for="tray-order-type">Service Type</label>
+            <select id="tray-order-type" class="form-select">
+              <option value="Takeaway Pick-up">Takeaway Pick-up</option>
+              <option value="Home / Office Delivery">Home / Office Delivery</option>
+              <option value="Dine-In Table Order">Dine-In Table Order</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tray-customer-location">Delivery Spot / Table #</label>
+            <input type="text" id="tray-customer-location" class="form-input" placeholder="e.g. Laroo / Gulu Town">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tray-customer-notes">Special Requests (Sauce, Spice Level)</label>
+          <input type="text" id="tray-customer-notes" class="form-input" placeholder="e.g. Extra chili dip, extra coleslaw">
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;">
+          <button onclick="RFCTray.checkoutViaWhatsApp()" class="btn-contour-primary" style="flex: 2; justify-content: center; background: #25D366; border-color: #25D366;">
+            <span>Send Order via WhatsApp</span>
+          </button>
+          <a href="tel:0743599458" class="btn-contour-secondary" style="flex: 1; justify-content: center;">
+            <span>Call</span>
+          </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem;">
+          <button onclick="RFCTray.clearTray()" style="font-size: 0.75rem; color: var(--text-muted); text-decoration: underline; font-family: var(--font-mono);">CLEAR TRAY</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PARTY & GARDEN RESERVATION MODAL -->
+  <div id="party-modal" class="modal-overlay" onclick="if(event.target === this) AppUtils.closePartyModal()">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" onclick="AppUtils.closePartyModal()" aria-label="Close Party Modal">✕</button>
+
+      <div class="modal-header">
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--color-terracotta); letter-spacing: 0.1em; text-transform: uppercase;">CELEBRATE WITH RFC</span>
+        <h3>Party & Garden Booking</h3>
+        <p>Reserve outdoor garden lawn tables under fairy lights or indoor booth platters.</p>
+      </div>
+
+      <form onsubmit="AppUtils.submitPartyBooking(event)">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div class="form-group">
+            <label class="form-label" for="party-name">Name *</label>
+            <input type="text" id="party-name" class="form-input" required placeholder="e.g. Grace Aol">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="party-phone">Phone Number *</label>
+            <input type="tel" id="party-phone" class="form-input" required placeholder="e.g. 0772 123456">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div class="form-group">
+            <label class="form-label" for="party-type">Occasion</label>
+            <select id="party-type" class="form-select">
+              <option value="Outdoor Evening Garden Party">Outdoor Evening Garden Party</option>
+              <option value="Birthday Celebration">Birthday Celebration</option>
+              <option value="Anniversary Gathering">Anniversary Gathering</option>
+              <option value="Corporate Lunch Banquet">Corporate Lunch Banquet</option>
+              <option value="Student Social Hangout">Student Social Hangout</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="party-guests">Guests</label>
+            <input type="number" id="party-guests" class="form-input" min="4" max="150" value="15">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div class="form-group">
+            <label class="form-label" for="party-date">Date & Time</label>
+            <input type="datetime-local" id="party-date" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="party-package-select">Menu Package</label>
+            <select id="party-package-select" class="form-select">
+              <option value="Outdoor Garden Evening Lawn Setup">Outdoor Garden Evening Setup</option>
+              <option value="Grand Celebration Feast (Pizza & Burgers)">Grand Feast (Pizza & Burgers)</option>
+              <option value="Crispy Chicken Mega Buckets">Crispy Chicken Mega Buckets</option>
+              <option value="Ugandan Local Culinary Feast">Ugandan Local Feast</option>
+              <option value="Indian Curries & Biryani Spread">Indian Curries Spread</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="party-notes">Special Requests & Decor Notes</label>
+          <textarea id="party-notes" class="form-textarea" rows="2" placeholder="e.g. Table arrangement under fairy-lit tree, birthday cake coordination..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-contour-primary" style="width: 100%; justify-content: center; background: #25D366; border-color: #25D366; margin-top: 0.5rem;">
+          <span>Send Booking Request via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/main.js"></script>
+</body>
+</html>
